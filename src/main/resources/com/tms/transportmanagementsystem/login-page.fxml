@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="241.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tms.transportmanagementsystem.fxControllers.LoginPage">
+   <children>
+      <TextField fx:id="loginField" layoutX="54.0" layoutY="34.0" prefHeight="25.0" prefWidth="246.0" promptText="Enter login name" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="53.0" />
+      <PasswordField fx:id="pswField" layoutX="54.0" layoutY="77.0" prefHeight="25.0" prefWidth="246.0" promptText="Enter password" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="53.0" />
+      <CheckBox fx:id="managerCheck" layoutX="54.0" layoutY="112.0" mnemonicParsing="false" text="Signing in as Manager" />
+      <Button layoutX="133.0" layoutY="144.0" mnemonicParsing="false" onAction="#validateUser" prefHeight="25.0" prefWidth="88.0" text="Sign in" AnchorPane.leftAnchor="133.0" AnchorPane.rightAnchor="132.0" />
+      <Button layoutX="119.0" layoutY="188.0" mnemonicParsing="false" onAction="#goToRegistrationPage" prefHeight="25.0" prefWidth="117.0" text="Create new user" AnchorPane.leftAnchor="119.0" AnchorPane.rightAnchor="117.0" />
+
+
+   </children>
+</AnchorPane>

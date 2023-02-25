@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="288.0" prefWidth="384.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tms.transportmanagementsystem.fxControllers.ManageCommentsPage">
+   <children>
+      <TextArea fx:id="commentTextField" layoutX="26.0" layoutY="24.0" prefHeight="200.0" prefWidth="329.0" promptText="Comment Text" />
+      <Button fx:id="createButton" layoutX="165.0" layoutY="242.0" mnemonicParsing="false" onAction="#createComment" text="Create" />
+   </children>
+</AnchorPane>

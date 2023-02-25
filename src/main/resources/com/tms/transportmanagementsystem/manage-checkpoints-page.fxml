@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="191.0" prefWidth="215.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tms.transportmanagementsystem.fxControllers.ManageCheckpointsPage">
+   <children>
+      <TextField fx:id="checkpointLocation" layoutX="33.0" layoutY="34.0" promptText="Checkpoint Location" />
+      <TextField fx:id="usedAmountOfFuel" layoutX="33.0" layoutY="78.0" promptText="Used Fuel (In Liters)" />
+      <ChoiceBox fx:id="destinationChoice" layoutX="33.0" layoutY="119.0" prefWidth="150.0" />
+      <Button fx:id="actionButton" layoutX="82.0" layoutY="158.0" mnemonicParsing="false" onAction="#createCheckpoint" text="Create" />
+   </children>
+</AnchorPane>

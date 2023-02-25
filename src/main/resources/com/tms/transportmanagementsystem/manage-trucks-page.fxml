@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="362.0" prefWidth="209.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tms.transportmanagementsystem.fxControllers.ManageTrucksPage">
+   <children>
+      <ChoiceBox fx:id="truckModelChoice" layoutX="30.0" layoutY="26.0" prefWidth="150.0" />
+      <DatePicker fx:id="makeDateField" layoutX="29.0" layoutY="65.0" prefHeight="25.0" prefWidth="149.0" promptText="Make Date" />
+      <DatePicker fx:id="technicalExpirationDateField" layoutX="29.0" layoutY="102.0" prefHeight="25.0" prefWidth="149.0" promptText="Technical Expiration" />
+      <TextField fx:id="weightField" layoutX="29.0" layoutY="139.0" promptText="Weight" />
+      <TextField fx:id="hpField" layoutX="29.0" layoutY="174.0" promptText="Horse Power" />
+      <TextField fx:id="fuelTankCapacityField" layoutX="29.0" layoutY="210.0" promptText="Fuel Tank Capacity" />
+      <ChoiceBox fx:id="driverChoice" layoutX="29.0" layoutY="246.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="managerChoice" layoutX="29.0" layoutY="284.0" prefWidth="150.0" />
+      <Button fx:id="actionButton" layoutX="78.0" layoutY="323.0" mnemonicParsing="false" onAction="#createTruck" text="Create" />
+   </children>
+</AnchorPane>

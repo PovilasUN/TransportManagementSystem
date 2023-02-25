@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="allTabs" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="612.0" prefWidth="670.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tms.transportmanagementsystem.fxControllers.MainPage">
+    <tabs>
+        <Tab fx:id="userTab" text="User View">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="542.0" prefWidth="670.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="95.0" />
+                  <Button fx:id="driverUpdate" layoutX="50.0" layoutY="544.0" mnemonicParsing="false" onAction="#updateDriver" prefHeight="25.0" prefWidth="108.0" text="Driver Update" />
+                  <Button fx:id="driverDelete" layoutX="194.0" layoutY="544.0" mnemonicParsing="false" onAction="#deleteDriver" prefHeight="25.0" prefWidth="108.0" text="Driver Delete" />
+                  <ListView fx:id="driverListView" layoutX="27.0" layoutY="67.0" prefHeight="458.0" prefWidth="303.0" />
+                  <ListView fx:id="managerListView" layoutX="342.0" layoutY="67.0" prefHeight="458.0" prefWidth="303.0" />
+                  <Label layoutX="132.0" layoutY="14.0" text="Drivers">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="428.0" layoutY="14.0" text="Managers">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="managerUpdate" layoutX="367.0" layoutY="544.0" mnemonicParsing="false" onAction="#updateManager" prefHeight="25.0" prefWidth="108.0" text="Manager Update" />
+                  <Button fx:id="managerDelete" layoutX="512.0" layoutY="544.0" mnemonicParsing="false" onAction="#deleteManager" prefHeight="25.0" prefWidth="108.0" text="Manager Delete" />
+               </children></AnchorPane>
+            </content>
+        </Tab>
+      <Tab fx:id="orderTab" text="Order View">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="611.0" prefWidth="670.0">
+               <children>
+                  <Label layoutX="108.0" layoutY="14.0" text="Destinations">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="destinationListView" layoutX="26.0" layoutY="68.0" prefHeight="385.0" prefWidth="303.0" />
+                  <Label layoutX="411.0" layoutY="14.0" text="Checkpoints">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="checkpointListView" layoutX="341.0" layoutY="68.0" prefHeight="385.0" prefWidth="303.0" />
+                  <Button fx:id="destinationView" layoutX="41.0" layoutY="476.0" mnemonicParsing="false" onAction="#viewDestination" prefHeight="25.0" prefWidth="119.0" text="View Destination" />
+                  <Button fx:id="destinationUpdate" layoutX="118.0" layoutY="509.0" mnemonicParsing="false" onAction="#updateDestination" prefHeight="25.0" prefWidth="119.0" text="Update Destination" />
+                  <Button fx:id="checkpointCreation" layoutX="352.0" layoutY="476.0" mnemonicParsing="false" onAction="#createCheckpoint" prefHeight="25.0" prefWidth="119.0" text="Create Checkpoint" />
+                  <Button fx:id="checkpointUpdate" layoutX="509.0" layoutY="476.0" mnemonicParsing="false" onAction="#updateCheckpoint" prefHeight="25.0" prefWidth="119.0" text="Update Checkpoint" />
+                  <Button fx:id="destinationCreation" layoutX="41.0" layoutY="540.0" mnemonicParsing="false" onAction="#createDestination" prefHeight="25.0" prefWidth="119.0" text="Create Destination" />
+                  <Button fx:id="destinationDelete" layoutX="199.0" layoutY="541.0" mnemonicParsing="false" onAction="#deleteDestination" prefHeight="25.0" prefWidth="119.0" text="Delete Destination" />
+                  <Button fx:id="checkpointDelete" layoutX="433.0" layoutY="540.0" mnemonicParsing="false" onAction="#deleteCheckpoint" prefHeight="25.0" prefWidth="119.0" text="Delete Checkpoint" />
+                  <Button fx:id="destinationFilter" layoutX="206.0" layoutY="476.0" mnemonicParsing="false" onAction="#filterDestination" text="Filter Destinations" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="truckTab" text="Truck View">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="truckListView" layoutX="26.0" layoutY="67.0" prefHeight="416.0" prefWidth="303.0" />
+                  <ListView fx:id="cargoListView" layoutX="341.0" layoutY="67.0" prefHeight="416.0" prefWidth="303.0" />
+                  <Label layoutX="135.0" layoutY="14.0" text="Trucks">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="446.0" layoutY="14.0" text="Cargos">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="truckCreate" layoutX="53.0" layoutY="502.0" mnemonicParsing="false" onAction="#createTruck" text="Create Truck" />
+                  <Button fx:id="cargoCreate" layoutX="360.0" layoutY="502.0" mnemonicParsing="false" onAction="#createCargo" text="Create Cargo" />
+                  <Button fx:id="truckUpdate" layoutX="219.0" layoutY="502.0" mnemonicParsing="false" onAction="#updateTruck" text="Update Truck" />
+                  <Button fx:id="truckDelete" layoutX="136.0" layoutY="535.0" mnemonicParsing="false" onAction="#deleteTruck" text="Delete Truck" />
+                  <Button fx:id="cargoUpdate" layoutX="539.0" layoutY="502.0" mnemonicParsing="false" onAction="#updateCargo" text="Update Cargo" />
+                  <Button fx:id="cargoDelete" layoutX="450.0" layoutY="535.0" mnemonicParsing="false" onAction="#deleteCargo" text="Delete Cargo" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab text="Forums">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="forumListView" layoutX="34.0" layoutY="71.0" onMouseClicked="#loadComments" prefHeight="465.0" prefWidth="238.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#createForum" text="Add Forum" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></ListView>
+                  <TreeView fx:id="commentTreeList" layoutX="286.0" layoutY="71.0" prefHeight="463.0" prefWidth="347.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                              <MenuItem mnemonicParsing="false" onAction="#createComment" text="Reply" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></TreeView>
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    </tabs>
+</TabPane>
